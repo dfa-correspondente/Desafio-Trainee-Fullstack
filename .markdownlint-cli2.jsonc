@@ -1,0 +1,21 @@
+// Regras de Markdown da documentação (docs/ e README). Rode antes do PR: npx markdownlint-cli2.
+// Se o repositório tem CI, o job de documentação (modelos/ci-documentacao.yml) roda as mesmas regras.
+{
+  "config": {
+    "default": true,
+    // Linhas longas são comuns em tabelas e não atrapalham a leitura renderizada.
+    "MD013": false,
+    // <br/> dentro de tabelas e diagramas.
+    "MD033": false,
+    // Títulos iguais em seções diferentes ("Contexto", "Decisão") são o formato dos ADRs.
+    "MD024": { "siblings_only": true },
+    // O projeto escreve tabelas como |---|---|; reformatar todas não muda nada no resultado.
+    "MD060": false
+  },
+  "globs": ["README.md", "docs/**/*.md"],
+  // A ação do GitHub inclui todo .md da raiz; CLAUDE.md/AGENTS.md são instruções para ferramentas de código,
+  // com estilo próprio, e não fazem parte da documentação.
+  // Arquivos gerados do código não são editados à mão: liste-os aqui. Tire o diagrama-do-banco.md
+  // se o repositório não gera esse arquivo.
+  "ignores": ["CLAUDE.md", "AGENTS.md", "docs/referencia/diagrama-do-banco.md"]
+}
