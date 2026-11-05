@@ -3,7 +3,7 @@ descricao: >-
   Enunciado do desafio técnico para vagas de trainee fullstack: o candidato faz um fork e
   constrói um Analisador de Documentos (Node.js, React e PostgreSQL). O repositório tem só
   o enunciado e os exemplos de entrada e saída esperada; não há código nem sistema no ar.
-setores: [rh, ti]
+setores: [administrativo, ti]
 publico: interno
 status: parado
 stack: [Node.js, React, PostgreSQL]
